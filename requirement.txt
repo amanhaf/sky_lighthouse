@@ -1,0 +1,15 @@
+FLASK
+gunicorn
+pandas
+os
+csv
+werkzeug
+random
+shutil
+tensorflow 
+keras_preprocessing
+keras
+keras_preprocessing.image 
+matplotlib.pyplot
+numpy
+pickle
