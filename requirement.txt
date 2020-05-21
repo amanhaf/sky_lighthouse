@@ -4,9 +4,8 @@ pandas
 os
 csv
 werkzeug
-random
 shutil
 tensorflow==2.0.2.
-matplotlib.pyplot
+matplotlib
 numpy
 pickle
