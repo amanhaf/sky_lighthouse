@@ -5,7 +5,6 @@ werkzeug
 tensorflow==2.0.2
 matplotlib
 numpy
-pickle
 classify
 predict
 random
