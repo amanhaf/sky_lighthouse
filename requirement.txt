@@ -1,4 +1,4 @@
-FLASK
+Flask
 gunicorn
 pandas
 os
@@ -7,7 +7,7 @@ werkzeug
 random
 shutil
 tensorflow==2.0.2.
-tensorflow.keras
+tensorflow
 matplotlib.pyplot
 numpy
 pickle
