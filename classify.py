@@ -2,10 +2,10 @@ import pandas as pd
 import os, random, shutil
 
 import tensorflow as tf
-import keras_preprocessing
-from keras.callbacks import EarlyStopping
-from keras_preprocessing import image
-from keras_preprocessing.image import ImageDataGenerator
+import tensorflow.keras.preprocessing
+from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 import numpy as np
 
