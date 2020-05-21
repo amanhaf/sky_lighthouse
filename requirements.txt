@@ -1,7 +1,6 @@
 Flask
 gunicorn
 pandas
-os
 csv
 werkzeug
 shutil
