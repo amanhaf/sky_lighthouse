@@ -8,9 +8,6 @@ random
 shutil
 tensorflow==2.0.2.
 tensorflow.keras
-tensorflow.keras.callbacks
-tensorflow.keras.preprocessing
-tensorflow.keras.preprocessing.image 
 matplotlib.pyplot
 numpy
 pickle
