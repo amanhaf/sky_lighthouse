@@ -10,7 +10,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 image_directory = '/Volumes/Seagate/Local-DSI/Capstone/webapp/static/uploads'
-model = tf.keras.models.load_model('my_model.h5')
+#Reading the model from JSON file
+with open('model.json', 'r') as json_file:
+    json_savedModel= json_file.read()
+#load the model architecture
+model_j = tf.keras.models.model_from_json(json_savedModel)
+model_j.load_weights('weights.h5')
+
+
 
 def classify(name):
     
@@ -19,7 +26,7 @@ def classify(name):
     x = np.expand_dims(x, axis=0)
 
     images = np.vstack([x])
-    classes = model.predict(images)
+    classes =  model_j.predict(images)
     clist= classes.tolist()[0]
         
     if clist[0] == 1.0:
@@ -31,4 +38,5 @@ def classify(name):
     elif clist[2] == 1.0:
         print("Spiral")
         return "Spiral"
+
 
