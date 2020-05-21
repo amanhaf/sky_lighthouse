@@ -1,7 +1,6 @@
 Flask
 gunicorn
 pandas
-csv
 werkzeug
 shutil
 tensorflow==2.0.2
