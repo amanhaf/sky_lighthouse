@@ -1,0 +1,124 @@
+body{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+.title{
+margin: 70px auto;
+font-family: verdana;
+font-weight: 900;
+text-align: center;
+font-size: 70px;
+}
+.body{
+  margin: 30px auto;
+  width: 90%;
+  padding: 20px 10px;
+  background-color: #fcfaf6;
+  opacity: 0.7;
+  border-radius: 5px; 
+}
+.prediction{
+margin: 70px auto;
+font-family: verdana;
+font-weight: 700;
+font-size: 40px;
+
+}
+.footer{
+	padding-top: 10px;
+	padding-bottom: 10px ;
+}
+.msg{
+	margin: auto;
+	font-family: verdana;
+	font-weight: 400;
+	font-size: 40px;
+	text-align: center;
+}
+.text{
+	margin: 50px auto;
+ 	width:90%;
+	text-align: center;
+}
+.galaxy{
+	margin: 50px auto;
+ 	width:100%;
+}
+.predict{
+	width: 100%;
+	font-size: 16px;
+	background-image: url('https://cdn.pixabay.com/photo/2017/05/08/08/35/star-field-2294797_960_720.jpg');
+	padding: 40px;
+	padding-top: 80px;
+	border-radius: 0px 35px 0px 35px; 
+	
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+label{
+color: white;
+font-weight: 500;
+text-align: center;
+}
+
+.predict input[type=text]{
+	font-style: italic;
+	text-align: center;
+	background: transparent;
+	outline: none;
+	border: none;
+	border-bottom: 1px dashed white;
+	width: 175px;
+	overflow: hidden;
+	resize:none;
+	height:20px;
+	color: white;
+	
+}
+
+.predict input[type=text]:focus{
+
+	border-bottom: 1px dashed orange;
+	color: white;
+} 
+.predict input[type=submit] {
+    background-color: #ffc04d;
+    color: white;
+    padding: 10px 30px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-align: right;
+
+}
+.classify input[type=submit] {
+    background-color: #ffc04d;
+    color: white;
+    padding: 10px 30px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 10px;
+
+}
+
+.buttons{text-align: center;
+}
+div button {
+	display:inline-block;
+	background-color: #ffc04d;
+    color: white;
+    padding: 10px 30px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 10px;
+}

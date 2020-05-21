@@ -23,7 +23,7 @@ def allowed_file(filename):
 def home():
     return render_template("main.html")
 
-@app.route('/login', methods=["POST", "GET"])
+@app.route('/output', methods=["POST", "GET"])
 def form():
     type=''
     filename=''
@@ -73,21 +73,11 @@ def form():
                     else:
                         filename = secure_filename(image.filename)
                         image.save(os.path.join(app.config['UPLOAD_FOLDER'], image.filename))
-
+                        imgfile = app.config['UPLOAD_FOLDER'] + filename
+                    
                     type = classify.classify(filename)
                     print("Image saved")
-                    return render_template('output.html', type=type)
-    else:
-        return render_template("main.html")
-
-
-@app.route('/<usr>', methods=["POST", "GET"])
-def user(usr):
-    return f"<h1>{usr}</h1>"
-
-@app.route('/output', methods=["POST", "GET"])
-def output(result):
-    return render_template('output.html', result = result)
+                    return render_template('output.html', type=type, imgfile=imgfile)
 
 
 if __name__== '__main__':

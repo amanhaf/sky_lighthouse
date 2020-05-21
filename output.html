@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Sky Lighthouse{% endblock %}
+{% block content %} 
+
+	<div class="body"">
+		<h1 class="title" id="home">Sky L<img src="{{url_for('static', filename='images/lighthouse.png')}}" style="width:72px;height:72px;border:0;">ghthouse</h1>
+	
+	<p class="text"> Sky lighthouse is a machine learning web app that is intended to identify an astronomical object based on 
+	information acquired by the user using machine learning, and classify the type of a galaxy image, also uploaded by the user 
+	using Neural Networks and deep learning.<br>
+	 Sky Lighthouse helps a great deal in understanding the system we live in.  We are part of this Universe, part of this giant system. 
+	We are created by the same elements that have created all the systems in the Universe.</p>
+	
+	</div>
+
+<div class="body"">
+	<div>
+		{% if object %}
+            <h3 class="msg" style="padding-bottom: 20px; padding-top: 30px; ">Your Object is..</h3>
+            <h4 class="msg" style="font-size: 30px; padding-bottom: 20px; padding-top: 30px; font-weight: bold">{{object}}</h4>
+            {% if object == "STAR" %}
+            <p class="text">A star is an astronomical object consisting of a luminous spheroid of plasma held together by its own gravity. 
+            The nearest star to Earth is the Sun. Many other stars are visible to the naked eye from Earth during the night, appearing as
+             a multitude of fixed luminous points in the sky due to their immense distance from Earth. Historically, the most prominent stars 
+             were grouped into constellations and asterisms, the brightest of which gained proper names. Astronomers have assembled star catalogues 
+             that identify the known stars and provide standardized stellar designations. The observable Universe contains an estimated 1×1024 stars,
+              but most are invisible to the naked eye from Earth, including all stars outside our galaxy, the Milky Way. </p>
+                  
+            {% elif object == "GALAXY" %}
+            <p class="text">A galaxy is a gravitationally bound system of stars, stellar remnants, interstellar gas, dust, and dark matter. 
+            The word galaxy is derived from the Greek galaxias (γαλαξίας), literally "milky", a reference to the Milky Way. 
+            Galaxies range in size from dwarfs with just a few hundred million (108) stars to giants with one hundred trillion (1014) stars,
+            each orbiting its galaxy's center of mass. Galaxies are categorized according to their visual morphology as elliptical, spiral,
+             or irregular.[5] Many galaxies are thought to have supermassive black holes at their centers. The Milky Way's central black hole,
+              known as Sagittarius A*, has a mass four million times greater than the Sun. <br>
+              As of March 2016, GN-z11 is the oldest and most distant observed galaxy with a comoving distance of 32 billion light-years from Earth, and observed as it existed just 400 million years after the Big Bang.  </p>
+               
+               {% elif object == "QSO" %}
+            <p class="text">A quasar is a quasi-stellar radio source, which was first discovered in 1960.They emit electromagnetic radiation in the
+             frequency bands corresponding to radio waves, visible, ultraviolet, infrared, X-rays and gamma rays. They are many light-years away from
+              the Earth and the radiation from a quasar could take billions of years to reach us; they may carry signatures of the early stages of the universe. </p>
+               {% endif %}
+        {% endif %}
+		
+		{% if type  %}
+            <h3 class="msg" style="padding-bottom: 20px; padding-top: 30px; ">Your Galaxy is..</h3>
+            <h4 class="msg" style="font-size: 30px; padding-bottom: 20px; padding-top: 30px; font-weight: bold">{{type}}</h4>
+            <img src="{{imgfile}}" style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;">
+            
+            {% if type == "Elliptical" %}
+            <p class="text"> An elliptical galaxy is a type of galaxy with an approximately ellipsoidal shape and a smooth, nearly featureless image. 
+            They are one of the three main classes of galaxy described by Edwin Hubble in his Hubble sequence and 1936 work The Realm of the Nebulae, 
+            along with spiral and lenticular galaxies. Elliptical (E) galaxies are, together with lenticular galaxies (S0) with their large-scale disks,
+             and ES galaxies with their intermediate scale disks, a subset of the 'early-type' galaxy population. </p>
+                  
+            {% elif type == "Lenticular" %}
+            <p class="text">Spiral galaxies form a class of galaxy originally described by Edwin Hubble in his 1936 work The Realm of the Nebulae and,
+             as such, form part of the Hubble sequence. Most spiral galaxies consist of a flat, rotating disk containing stars, gas and dust,
+              and a central concentration of stars known as the bulge. These are often surrounded by a much fainter halo of stars,
+               many of which reside in globular clusters. </p>
+               
+               {% elif type == "Spiral" %}
+            <p class="text">Spiral galaxies form a class of galaxy originally described by Edwin Hubble in his 1936 work The Realm of the Nebulae and,
+             as such, form part of the Hubble sequence. Most spiral galaxies consist of a flat, rotating disk containing stars, gas and dust,
+              and a central concentration of stars known as the bulge. These are often surrounded by a much fainter halo of stars,
+               many of which reside in globular clusters. </p>
+               {% endif %}
+        {% endif %}
+	</div>
+	
+	<div class="buttons" style="text-align: center; padding-bottom: 20px;">
+	<button type="button"  class="button" onclick="location.href='/home#prediction'" style="
+	display:inline-block;
+	background-color: #ffc04d;
+    color: white;
+    padding: 10px 30px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 10px;
+">Identify Objects</button>
+ 	<button type="button"  class="button" onclick="location.href='/home#classification'" style="
+	display:inline-block;
+	background-color: #ffc04d;
+    color: white;
+    padding: 10px 30px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 10px;">Classify Galaxies</button>
+    </div>
+</div>
+
+{% endblock %}
