@@ -2,7 +2,6 @@ Flask
 gunicorn
 pandas
 werkzeug
-shutil
 tensorflow==2.0.2
 matplotlib
 numpy
