@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__, instance_relative_config=False, template_folder="templates", static_folder="static")
 
-app.config['UPLOAD_FOLDER'] =  '/Volumes/Seagate/Local-DSI/Capstone/webapp/static/uploads/'
+app.config['UPLOAD_FOLDER'] =  './static/uploads/'
 app.config['ALLOWED_IMAGE_EXTENSIONS'] = ['PNG', 'JPG', 'JPEG']
 
 def allowed_file(filename):
