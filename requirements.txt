@@ -1,0 +1,14 @@
+Flask
+gunicorn
+pandas
+os
+csv
+werkzeug
+shutil
+tensorflow==2.0.2
+matplotlib
+numpy
+pickle
+classify
+predict
+random
