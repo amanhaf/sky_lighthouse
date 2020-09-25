@@ -2,7 +2,7 @@ Flask
 gunicorn
 pandas
 werkzeug
-tensorflow==2.0.2
+tensorflow==2.0.3
 matplotlib
 numpy
 classify
